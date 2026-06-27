@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe Pro</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- HOME SCREEN -->
+
+        <div id="homeScreen" class="home-screen">
+
+            <h1>🎮 Tic Tac Toe</h1>
+
+            <p>Choose Game Mode</p>
+
+            <div class="mode-buttons">
+
+                <button onclick="startGame('pvp')">
+                    👥 Player vs Player
+                </button>
+
+                <button onclick="startGame('cpu')">
+                    🤖 Player vs Computer
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- GAME SCREEN -->
+
+        <div id="gameScreen" class="game-screen hidden">
+
+            <div class="top-bar">
+
+                <button onclick="goHome()" class="back-btn">
+                    🏠 Home
+                </button>
+
+                <h2 id="modeTitle"></h2>
+
+            </div>
+
+            <!-- SCOREBOARD -->
+
+            <div class="score-board">
+
+                <div class="score-card">
+
+                    <h3>❌ X</h3>
+
+                    <span id="xScore">0</span>
+
+                </div>
+
+                <div class="score-card">
+
+                    <h3>🤝 Draw</h3>
+
+                    <span id="drawScore">0</span>
+
+                </div>
+
+                <div class="score-card">
+
+                    <h3 id="player2Title">⭕ O</h3>
+
+                    <span id="oScore">0</span>
+
+                </div>
+
+            </div>
+
+            <!-- TURN -->
+
+            <div id="status" class="status">
+                Player X Turn
+            </div>
+
+            <!-- BOARD -->
+
+            <div class="board">
+
+                <div class="cell" data-index="0"></div>
+                <div class="cell" data-index="1"></div>
+                <div class="cell" data-index="2"></div>
+
+                <div class="cell" data-index="3"></div>
+                <div class="cell" data-index="4"></div>
+                <div class="cell" data-index="5"></div>
+
+                <div class="cell" data-index="6"></div>
+                <div class="cell" data-index="7"></div>
+                <div class="cell" data-index="8"></div>
+
+            </div>
+
+            <div class="buttons">
+
+                <button id="restartBtn">
+                    🔄 Restart Game
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
